@@ -6,12 +6,13 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "squadup-app.firebaseapp.com",
-  projectId: "squadup-app",
-  storageBucket: "squadup-app.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyAzX7gXbSL47mfPTwku_U7CfTiPogDkiJU",
+  authDomain: "frds-24bee.firebaseapp.com",
+  projectId: "frds-24bee",
+  storageBucket: "frds-24bee.firebasestorage.app",
+  messagingSenderId: "317375837625",
+  appId: "1:317375837625:web:463f829db410e54a6af268",
+  measurementId: "G-Y36F1S9L5C"
 };
 
 // Initialize Firebase
