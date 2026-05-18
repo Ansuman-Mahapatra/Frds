@@ -60,9 +60,14 @@ export default function ChatRoomScreen() {
           <Text style={styles.backButtonText}>← Back</Text>
         </TouchableOpacity>
         <Text style={styles.title}>{title || 'Chat'}</Text>
-        <TouchableOpacity onPress={triggerMatchScheduler}>
-          <Text style={styles.headerAction}>📅 Schedule</Text>
-        </TouchableOpacity>
+        <View style={styles.headerActions}>
+          <TouchableOpacity onPress={() => router.push(`/chat/call/${id}`)} style={{ marginRight: 15 }}>
+            <Text style={styles.headerAction}>📞 Call</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={triggerMatchScheduler}>
+            <Text style={styles.headerAction}>📅 Schedule</Text>
+          </TouchableOpacity>
+        </View>
       </View>
 
       {/* Pinned Announcement */}
@@ -121,6 +126,7 @@ const styles = StyleSheet.create({
   backButton: { paddingVertical: 5 },
   backButtonText: { color: '#00D2FF', fontSize: 16, fontWeight: 'bold' },
   title: { color: '#FFF', fontSize: 18, fontWeight: 'bold' },
+  headerActions: { flexDirection: 'row', alignItems: 'center' },
   headerAction: { color: '#FF3366', fontSize: 16, fontWeight: 'bold' },
   pinnedContainer: { backgroundColor: 'rgba(255, 51, 102, 0.1)', padding: 12, borderBottomWidth: 1, borderBottomColor: 'rgba(255, 51, 102, 0.2)' },
   pinnedTitle: { color: '#FF3366', fontSize: 12, fontWeight: 'bold', marginBottom: 4 },
